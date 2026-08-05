@@ -13,7 +13,7 @@
 
 import type { D1Database } from "@cloudflare/workers-types";
 import { isLixBlogsScope } from "./lixblogs-scopes";
-import { SUPPORTED_OAUTH_SCOPES } from "./oauth-scopes";
+const SUPPORTED_OAUTH_SCOPES = ["openid", "profile", "email", "offline_access"];
 import { generateRandomString, generateUUID, hashString } from "./webcrypto";
 
 const DEVICE_CODE_PREFIX = "dvc_";
